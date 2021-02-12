@@ -3,8 +3,7 @@
 int main (void)
 {
     int NUMBER = 0;
-    printf("Please input int number: ");
-
+    printf("Please input positive int number: ");
     scanf("%d", &NUMBER);
     for(int i=0; i<NUMBER; i++)
     {   
