@@ -1,7 +1,11 @@
 #include <stdio.h>
 
-int main(int argc, char * argv[]){
-int NUMBER = 5;
+int main (void)
+{
+    int NUMBER = 0;
+    printf("Please input int number: ");
+
+    scanf("%d", &NUMBER);
     for(int i=0; i<NUMBER; i++)
     {   
         for(int k=NUMBER-1; k>i; k--)
