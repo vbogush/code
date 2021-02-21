@@ -1,13 +1,62 @@
 from tkinter import *
 tk=Tk()
-tk.geometry ("260x370")
+tk.geometry ("200x320")
 tk.title("Calculator")
 ent = Entry(justify="right",font="14")
-ent.place(x=20,y=20,width=220,height=30)
-BC=Button(text="C",font="14")
-BC.place(x=20,y=70,width=100,height=40)
-Equal=Button(text="-",font="14")
-Equal.place(x=140,y=70,width=100,height=40)
+ent.place(x=20,y=20,width=160,height=30)
+
+global a,b
+
+
+
+def BC_click():
+    ent.delete(0,END)
+BC=Button(text="C",font="14",command=BC_click)
+BC.place(x=20,y=70,width=80,height=40)
+
+Equal=Button(text="=",font="14")
+Equal.place(x=100,y=70,width=80,height=40)
+
+def B0_click():
+    ent.insert(END,"0")
+B0=Button(text="0",font="14",command=B0_click)
+B0.place(x=20,y=250,width=80,height=40)
+
+def Point_click():
+    ent.insert(END,".")
+Point=Button(text=".",font="14",command=Point_click)
+Point.place(x=100,y=250,width=40,height=40)
+
+
+
+Plus=Button(text="+",font="14")
+Plus.place(x=140,y=250,width=40,height=40)
+
+
+
+
+def B1_click():
+    ent.insert(END,"1")
+B1=Button(text="1",font="14",command=B1_click)
+B1.place(x=20,y=210,width=40,height=40)
+
+def B2_click():
+    ent.insert(END,"2")
+B2=Button(text="2",font="14",command=B2_click)
+B2.place(x=60,y=210,width=40,height=40)
+
+def B3_click():
+    ent.insert(END,"3")
+B3=Button(text="3",font="14",command=B3_click)
+B3.place(x=100,y=210,width=40,height=40)
+
+
+
+
+Minus=Button(text="-",font="14")
+Minus.place(x=140,y=210,width=40,height=40)
+
+
 
 
 def B4_click():
@@ -25,6 +74,14 @@ def B6_click():
 B6=Button(text="6",font="14",command=B6_click)
 B6.place(x=100,y=170,width=40,height=40)
 
+
+
+
+Multiply=Button(text="*",font="14")
+Multiply.place(x=140,y=170,width=40,height=40)
+
+
+
 def B7_click():
     ent.insert(END,"7")
 B7=Button(text="7",font="14",command=B7_click)
@@ -39,5 +96,10 @@ def B9_click():
     ent.insert(END,"9")
 B9=Button(text="9",font="14",command=B9_click)
 B9.place(x=100,y=130,width=40,height=40)
+
+
+
+Divide=Button(text="/",font="14")
+Divide.place(x=140,y=130,width=40,height=40)
 
 tk.mainloop()
