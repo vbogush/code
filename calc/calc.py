@@ -5,16 +5,28 @@ tk.title("Calculator")
 ent = Entry(justify="right",font="14")
 ent.place(x=20,y=20,width=160,height=30)
 
-global a,b
-
-
+a=0
+b=None
 
 def BC_click():
     ent.delete(0,END)
 BC=Button(text="C",font="14",command=BC_click)
 BC.place(x=20,y=70,width=80,height=40)
 
-Equal=Button(text="=",font="14")
+def Equal_click():
+    global a,b
+    c=float(ent.get())
+    if b=="+":
+        a=a+c
+    if b=="-":
+        a=a-c
+    if b=="*":
+        a=a*c
+    if b=="/":
+        a=a/c
+    ent.delete(0,END)
+    ent.insert(END,a)
+Equal=Button(text="=",font="14",command=Equal_click)
 Equal.place(x=100,y=70,width=80,height=40)
 
 def B0_click():
@@ -27,9 +39,12 @@ def Point_click():
 Point=Button(text=".",font="14",command=Point_click)
 Point.place(x=100,y=250,width=40,height=40)
 
-
-
-Plus=Button(text="+",font="14")
+def Plus_click():
+    global a,b
+    a=float(ent.get())
+    b="+"
+    ent.delete(0,END)
+Plus=Button(text="+",font="14",command=Plus_click)
 Plus.place(x=140,y=250,width=40,height=40)
 
 
@@ -51,9 +66,12 @@ B3=Button(text="3",font="14",command=B3_click)
 B3.place(x=100,y=210,width=40,height=40)
 
 
-
-
-Minus=Button(text="-",font="14")
+def Minus_click():
+    global a,b
+    a=float(ent.get())
+    b="-"
+    ent.delete(0,END)
+Minus=Button(text="-",font="14",command=Minus_click)
 Minus.place(x=140,y=210,width=40,height=40)
 
 
@@ -74,10 +92,12 @@ def B6_click():
 B6=Button(text="6",font="14",command=B6_click)
 B6.place(x=100,y=170,width=40,height=40)
 
-
-
-
-Multiply=Button(text="*",font="14")
+def Multiply_click():
+    global a,b 
+    a=float(ent.get())
+    b="*"
+    ent.delete(0,END)
+Multiply=Button(text="*",font="14",command=Multiply_click)
 Multiply.place(x=140,y=170,width=40,height=40)
 
 
@@ -98,8 +118,12 @@ B9=Button(text="9",font="14",command=B9_click)
 B9.place(x=100,y=130,width=40,height=40)
 
 
-
-Divide=Button(text="/",font="14")
+def Divide_click():
+    global a,b 
+    a=float(ent.get())
+    b="/"
+    ent.delete(0,END)
+Divide=Button(text="/",font="14",command=Divide_click)
 Divide.place(x=140,y=130,width=40,height=40)
 
 tk.mainloop()
