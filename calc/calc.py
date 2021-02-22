@@ -8,6 +8,7 @@ ent.place(x=20,y=20,width=160,height=30)
 a=0
 b=None
 
+
 def BC_click():
     ent.delete(0,END)
 BC=Button(text="C",font="14",command=BC_click)
