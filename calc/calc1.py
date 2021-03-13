@@ -1,4 +1,5 @@
 from tkinter import *
 window = Tk()
-window.mainloop()
+
 window.title('My Title')
+window.mainloop()
