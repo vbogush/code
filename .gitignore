@@ -353,3 +353,5 @@ MigrationBackup/
 #storage scripts files
 cms_stg_pl_scripts.zip
 scripts.zip
+#Directory docs
+docs/
