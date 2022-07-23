@@ -350,3 +350,6 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+#storage scripts files
+cms_stg_pl_scripts.zip
+scripts.zip
